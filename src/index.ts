@@ -30,6 +30,7 @@ const startServer = async (port: number) => {
     "/graphql",
     cors<cors.CorsRequest>({
       origin: ["https://backend-graphql-test.herokuapp.com"],
+      credentials: true,
     }),
     bodyParser.json(),
     expressMiddleware(server, {
