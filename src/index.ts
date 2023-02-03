@@ -56,10 +56,6 @@ const startServer = async (port: number) => {
 
   app.use("/graphiql", renderGraphiql);
 
-  app.get("/", (req: Request, res: Response) => {
-    express.static(__dirname + "/public/index.html");
-  });
-
   app.listen({
     port: port,
   });
