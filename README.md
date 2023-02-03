@@ -31,5 +31,17 @@
 
 ![image](https://user-images.githubusercontent.com/62287144/216623408-69b98ac3-cf75-4784-99e5-5fd253ed6395.png)
 
+## Query & Mutation
+- First thing, You need to login before using any Query and Mutation. Using this credentials:
+`username : user`
+`password : 123123`
 
-Link Demo :
+![image](https://user-images.githubusercontent.com/62287144/216716651-849ca518-fdb8-4746-bee2-2decf457f163.png)
+
+- After get the token, You can use that in the headers 
+
+![image](https://user-images.githubusercontent.com/62287144/216716785-4d290bf9-5749-4f53-8034-48f79c067bca.png)
+
+
+
+Link Demo : https://backend-graphql-test.herokuapp.com/graphiql
