@@ -29,10 +29,6 @@ const server = new ApolloServer<MyContext>({
 
 const startServer = async (port : number) => {
   await server.start();
-  app.use('/', (req: Request, res: Response) => {
-    res.sendFile(path.join(__dirname+'/index.html'));
-  });
-
   app.use('/graphql', bodyParser.json(), expressMiddleware(server, {
     context: async ({req}) => {
       const token = req.headers.authorization || '';
@@ -56,6 +52,10 @@ const startServer = async (port : number) => {
 
   app.use('/graphiql', (req: Request, res: Response) => {
     res.sendFile(path.join(__dirname+'/graphiql.html'));
+  });
+
+  app.use('/', (req: Request, res: Response) => {
+    res.sendFile(path.join(__dirname+'/index.html'));
   });
 
   app.listen({
