@@ -61,4 +61,4 @@ const startServer = async (port : number) => {
 }
 
 
-startServer(Number(process.env.APP_PORT));
+startServer(Number(process.env.APP_PORT) || 3000);
